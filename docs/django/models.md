@@ -37,9 +37,15 @@ instance = MyModel.objects.get(pk=1)
 instance.bar = 'foo'
 instance.save()
 
+queryset = MyModel.objects.all()
+queryset.update(name='Pedro')
+
 # Delete
 instance = MyModel.objects.get(pk=1)
 instance.delete()
+
+queryset = MyModel.objects.all()
+queryset.delete()
 ```
 
 ## [QuerySet](https://docs.djangoproject.com/en/3.1/ref/models/querysets/)

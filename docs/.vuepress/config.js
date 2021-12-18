@@ -37,16 +37,16 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
    */
   themeConfig: {
-    repo: 'https://github.com/disoftw',
+    repo: 'https://github.com/rnovec/django-rest',
     editLinks: false,
-    logo: 'https://www.aaaimx.org/software/logo.png',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png',
     docsDir: '',
     editLinkText: '',
     lastUpdated: false,
     nav: [
       {
-        text: 'Intro',
-        link: '/intro/'
+        text: 'Django',
+        link: '/django/'
       },
       {
         text: 'REST Framework',
@@ -66,11 +66,11 @@ module.exports = {
       }
     ],
     sidebar: {
-      '/intro/': [
+      '/django/': [
         {
           title: 'Intro',
           collapsable: false,
-          children: ['', 'projects', 'models', 'auth']
+          children: ['', 'intro', 'projects', 'models', 'auth']
         }
       ],
       '/rest-framework/': [
