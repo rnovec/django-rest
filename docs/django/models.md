@@ -1,4 +1,73 @@
-# [Modelos](https://docs.djangoproject.com/en/3.1/topics/db/models/)
+## [Modelos](https://docs.djangoproject.com/en/3.1/topics/db/models/)
+
+Para la persistencia de la infromación Django maneja modelos dentro de su ORM
+
+```py
+from django.db import models
+from uuid import uuid4
+from django.contrib.auth.models import User
+
+# Create your models here.
+class Customer(models.Model):
+    uuid = models.UUIDField(default=uuid4(), primary_key=True) # identificador único
+    user = models.ForeignKey(User, on_delete=models.CASCADE) # cuenta de usuario
+    rut = models.CharField(default="", blank=True, null=True, max_length=20) # clave
+    clave = models.CharField(default="", blank=True, null=True, max_length=50)
+    token = models.CharField(default="", blank=True, null=True, max_length=50)
+    cookies = models.TextField(default="", null=True, blank=True)
+
+class Book(models.Model):
+    uuid = models.UUIDField(default=uuid4(), blank=True, primary_key=True) # identificador único
+    customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
+    mes = #...
+    anio = #...
+    tipo = #...
+```
+
+Al crear un nuevo modelo o hacer algun cambio en sus campos:
+
+    $ python manage.py makemigrations
+    $ python manage.py migrate
+
+### Trabajando con modelos
+
+Asumamos que tenemos un modelo cualquiera llamado `Person` para cada modelo de Django podemos hacer alguna de las siguientes funciones:
+
+```py
+# models.py
+from django.db import models
+
+class Person(models.Model):
+    name = CharField(default="", max_length=50)
+    age = IntegerField(default=0)
+
+# somefile.py
+obj = Person.objects.get(pk=1) # obtener un registro por su Primary Key
+obj = Person.objects.get(name="Carlos") # obtener un registro por algun campo especifico
+obj.name # podemos acceder a sus datos
+
+# actualiar el valor de un campo
+obj.age = 40
+obj.save()
+
+queryset = Person.objects.all() # obetener todos los registros de una Tabla/Modelo
+
+# podemos cambiar el orden por defecto
+queryset = Person.objects.all().order_by('name') # ASCENDENTE
+queryset = Person.objects.all().order_by('-name') # DESCENDENT
+
+queryset = Person.objects.filter(name="Carlos") # Filtrar por algun campo esto devuelve una lista
+
+# actualizar en masa, actualizara todos los registros con los datos proporcionados
+Person.objects.update(name="Carlos", age=35)
+
+# crear un nuevo registro
+instance = Person(name="Ana", age=30)
+instance.save()
+
+```
+
+
 
 ```py
 from django.db import models
@@ -84,63 +153,7 @@ queryset = Post.objects.filter(created_at='2020-01-01')
 
 ## [Relaciones](https://docs.djangoproject.com/en/3.1/topics/db/models/#relationships)
 
-## Admin
+## Enlaces útiles
 
-```py
-# accounts/admin.py
-from django.contrib import admin
-from .models import MyModel
-
-class MyModelAdmin(admin.AdminModel):
-    model = MyModel
-    list_display = []
-
-admin.site.register(MyModelAdmin)
-
-@admin.register(User)
-class MyModelAdmin(admin.AdminModel):
-    model = MyModel
-    list_display = []
-
-```
-
-## [Vistas](https://docs.djangoproject.com/en/3.1/topics/http/views/)
-
-```py
-from django.shortcuts import render
-
-def home(request):
-    # ...
-    # Respuesta con template y contexto
-    return render(request, 'index.html', { "foo": "bar" })
-```
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <h1>{{ foo }}</h1>
-  </body>
-</html>
-```
-
-## Response
-
-```py
-from django.http import HttpResponse, JsonResponse​
-
-def example_http(request):
-    # ...
-    # Respuesta con HTML string
-    return HttpResponse('<h1/>Hello!!!</h1>')
-
-def example_json(request):​
-    # ...
-    # Respuesta con JSON
-    return JsonResponse({ "foo": "bar" })
-```
+[UUID](https://es.wikipedia.org/wiki/Identificador_%C3%BAnico_universal)
+[Advenced filtering](https://docs.djangoproject.com/en/3.0/topics/db/queries/#complex-lookups-with-q-objects)

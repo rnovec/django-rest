@@ -41,54 +41,13 @@ Algunas razones por las que es posible que desee utilizar **REST Framework**:
 
 # Temario
 
-## Módulo 1 - Introducción a Django (5 hrs)
+- Módulo 1 - Introducción a Django (5 hrs)
 
-- Configuración del entorno (1 hr)
-- Entornos virtuales (1 hr)
-- POO con Python (1 hr)
-  - Classes
-  - Módulos e imports
-  - Properties
-  - Herencia
-- Introducción al framework Django (1 hr)
-  - Comandos principales
-  - Estructura de un proyecto
-- ORM (1 hr)
-  - Modelos
-  - Instances
-  - Querysets
+- Módulo 2 - Django Framework (4.5 hrs)
 
-## Módulo 2 - Django Framework (4.5 hrs)
+- Módulo 3 - Django REST Framework (5 hrs)
 
-- Django Admin (1 hr)
-- Custom User Model (1.5 hr)
-- Services y selectores (20-30 min)
-- Signals (20-30 min)
-- Introducción a Django REST (1 hr)
-  - Configuración inicial
-  - CORS
-
-## Módulo 3 - Django REST Framework (5 hrs)
-
-- Serializers (1 hr)
-  - Escritura
-  - Lectura
-- Viewsets (1 hr)
-  - CRUD
-  - Filtros
-  - Custom actions
-- Router (20-30 min)
-- Documentación autogenerada (1 hr)
-- Proyecto integrador (1.5 hr)
-
-## Módulo 4 - Advanced topics (5 hrs)
-
-- Celery background tasks (1 hr)
-- AWS S3 (1 hr)
-- Testing (1 hr)
-- Rest Registration (1 hr)
-  - Git+Github+Django
-- Despliegue con Heroku (1 hr)
+- Módulo 4 - Advanced topics (5 hrs)
 
 # Recursos del Taller
 

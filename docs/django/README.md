@@ -2,17 +2,6 @@
 
 Django es un marco web **Python** de alto nivel que fomenta el desarrollo rápido y un diseño limpio y pragmático. Creado por desarrolladores experimentados, se encarga de gran parte de la molestia del desarrollo web, por lo que puede concentrarse en escribir su aplicación sin necesidad de reinventar la rueda. Es gratis y de **código abierto**.
 
-## Programación Orientada a Objetos (POO)
-
-Es un paradigma de programación en el que los conceptos delmundo real relevantes para nuestro problema se modelan a través de clases y objetos, y en el que nuestro programa consiste de una serie de interacciones entre estos objetos.
-
-- Clases
-- Objetos
-- Atributos
-- Instancias
-- Herencia
-- [Decoradores](https://realpython.com/primer-on-python-decorators/)
-
 ## Patrón MTV
 
 Separa datos, interfaz de usuario y lógica de control:
@@ -49,3 +38,13 @@ Separa datos, interfaz de usuario y lógica de control:
 - **sitemaps**: Generar sitemaps a partir de modelos.
 - **syndication**: Generar feeds RSS y Atom a partir de modelos.
 - **gis**: Trabajar con datos geo espaciales (**PostGIS**)
+
+## Organización de un proyecto Django
+
+- Un desarrollo es un **Proyecto**
+- Un **proyecto** consta de una o varias **aplicaciones**
+- Cada aplicación hace algo en concreto
+- **Proyecto**: "Comunidad web"
+- **Aplicaciones**: blog, foro, registro de usuarios, tienda online, newsletter, agregador de feeds...
+- Una aplicación puede ser utilizada por distintos proyectos a la vez
+- Un **proyecto** puede hacer funcionar varios sitios web

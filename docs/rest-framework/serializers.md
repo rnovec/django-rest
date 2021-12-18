@@ -1,4 +1,21 @@
-## [Serializers](https://www.django-rest-framework.org/api-guide/serializers/)
+# [Serializers](https://www.django-rest-framework.org/api-guide/serializers/)
+
+```py
+# serializers.py
+from rest_framework import serializers
+from .models import *
+
+# Serializers define the API representation.
+class ProductSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Product
+        fields = []
+        exclude = []
+```
+
+[Serilización](https://es.wikipedia.org/wiki/Serializaci%C3%B3n)
+
+## Lectura
 
 ```py
 from rest_framework import serializers​
@@ -15,3 +32,7 @@ class MyModelSerializer(serializers.ModelSerializer):​
        exclude = [] # campos a ignorar
        depth = 1 # manejo de relaciones
 ```
+
+## Escritura
+
+...

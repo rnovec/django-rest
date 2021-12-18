@@ -28,3 +28,4 @@ https://www.youtube.com/watch?v=rJWAGQ0JxxI
 - Django social Auth
 - Boto3
 - Celery
+

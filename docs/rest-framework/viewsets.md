@@ -10,6 +10,23 @@ def example(request, *args, **kwargs):​
 
 ```
 
+
+## Viewsets
+
+```py
+# views.py
+from rest_framework import viewsets
+from .models import *
+from .serializers import *
+
+class RoleViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows roles to be viewed or edited.
+    """
+    queryset = Role.objects.all()
+    serializer_class = RoleSerializer
+```
+
 ## Model Viewsets
 
 ```py
@@ -87,7 +104,11 @@ REST_FRAMEWORK = {
 
 - [Mixins]()
 - [Generic Views]()
-- [Custom actions]()
+
+## [Custom actions]()
+
 - [Params]()
 - [Source code](https://github.com/encode/django-rest-framework/blob/master/rest_framework/viewsets.py)
 - [Filters](https://pypi.org/project/django-filter/)
+
+## Documentación API

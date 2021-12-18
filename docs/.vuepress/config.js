@@ -39,7 +39,8 @@ module.exports = {
   themeConfig: {
     repo: 'https://github.com/rnovec/django-rest',
     editLinks: false,
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png',
+    logo:
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png',
     docsDir: '',
     editLinkText: '',
     lastUpdated: false,
@@ -52,10 +53,10 @@ module.exports = {
         text: 'REST Framework',
         link: '/rest-framework/'
       },
-      // {
-      //   text: 'Storages',
-      //   link: '/storages/'
-      // },
+      {
+        text: 'Advanced topics',
+        link: '/advanced/'
+      },
       {
         text: 'Proyecto',
         link: '/project/'
@@ -70,20 +71,28 @@ module.exports = {
         {
           title: 'Intro',
           collapsable: false,
-          children: ['', 'intro', 'projects', 'models', 'auth']
+          children: ['', 'intro', 'models', 'auth', 'static', 'other']
         }
       ],
       '/rest-framework/': [
         {
           title: 'REST Framework',
           collapsable: false,
+          children: ['', 'jwt', 'serializers', 'viewsets', 'router', 'security']
+        }
+      ],
+      '/advanced/': [
+        {
+          title: 'Advanced topics',
+          collapsable: false,
           children: [
             '',
-            'serializers',
-            'viewsets',
-            'security',
+            'db',
+            'heroku',
+            'celery',
+            's3',
             'testing',
-            // 'advanced'
+            'registration'
           ]
         }
       ]

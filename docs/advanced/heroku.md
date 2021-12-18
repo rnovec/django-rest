@@ -1,4 +1,4 @@
-# Despligue de una API en entorno productivo (notas)
+# Despligue de una API en entorno productivo
 
 ## SSH
 
