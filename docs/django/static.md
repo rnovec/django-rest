@@ -1,4 +1,4 @@
-# Configuración basica
+# Archivos estaticos
 
 ```py
 # settings.py

@@ -4,30 +4,59 @@ Para la persistencia de la infromación Django maneja modelos dentro de su ORM
 
 ```py
 from django.db import models
-from uuid import uuid4
-from django.contrib.auth.models import User
 
 # Create your models here.
-class Customer(models.Model):
-    uuid = models.UUIDField(default=uuid4(), primary_key=True) # identificador único
-    user = models.ForeignKey(User, on_delete=models.CASCADE) # cuenta de usuario
-    rut = models.CharField(default="", blank=True, null=True, max_length=20) # clave
-    clave = models.CharField(default="", blank=True, null=True, max_length=50)
-    token = models.CharField(default="", blank=True, null=True, max_length=50)
-    cookies = models.TextField(default="", null=True, blank=True)
-
-class Book(models.Model):
-    uuid = models.UUIDField(default=uuid4(), blank=True, primary_key=True) # identificador único
-    customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
-    mes = #...
-    anio = #...
-    tipo = #...
+class Income(models.Model):
+    name = models.CharField(max_length=50) # para textos cortos de longitud fija
+    date = models.DateField() # para fechas sin hora
+    amount = models.DecimalField(max_digits=10, decimal_places=2) # para decimales FloatField, IntegerField
+    description = models.TextField(blank=True) # para textos largos
+    is_active = models.BooleanField(default=True) # para booleanos
+    created_at = models.DateTimeField(auto_now_add=True) # para fechas con hora
+    updated_at = models.DateTimeField(auto_now=True)
 ```
 
 Al crear un nuevo modelo o hacer algun cambio en sus campos:
 
     $ python manage.py makemigrations
     $ python manage.py migrate
+
+# Django Admin
+
+```py
+# accounts/admin.py
+from django.contrib import admin
+from django.contrib.auth import get_user_model
+from django.contrib.auth.admin import UserAdmin
+from .forms import CustomUserCreationForm, CustomUserChangeForm
+
+CustomUser = get_user_model()
+
+class CustomUserAdmin(UserAdmin):
+    add_form = CustomUserCreationForm
+    form = CustomUserChangeForm
+    model = CustomUser
+    list_display = ['email', 'username',]
+
+admin.site.register(CustomUser, CustomUserAdmin)
+```
+
+## Django Admin
+
+```py
+# accounts/admin.py
+from django.contrib import admin
+from .models import MyModel
+
+# 1
+admin.site.register(MyModel)
+
+# 2
+@admin.register(MyModel)
+class MyModelAdmin(admin.AdminModel):
+    list_display = []
+
+```
 
 ### Trabajando con modelos
 
@@ -66,8 +95,6 @@ instance = Person(name="Ana", age=30)
 instance.save()
 
 ```
-
-
 
 ```py
 from django.db import models
@@ -152,6 +179,12 @@ queryset = Post.objects.filter(created_at='2020-01-01')
 - 5 Examples of ORM Delete
 
 ## [Relaciones](https://docs.djangoproject.com/en/3.1/topics/db/models/#relationships)
+
+### ForeginKey
+
+### ManyToMany
+
+### OneToOne
 
 ## Enlaces útiles
 

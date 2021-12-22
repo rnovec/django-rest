@@ -3,7 +3,7 @@ home: true
 heroImage: https://www.django-rest-framework.org/img/logo.png
 tagline:
 actionText: Quick Start →
-actionLink: /intro/
+actionLink: /django/
 footer: Made by rnovec with ❤️
 ---
 

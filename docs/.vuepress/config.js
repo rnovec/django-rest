@@ -49,22 +49,22 @@ module.exports = {
         text: 'Django',
         link: '/django/'
       },
-      {
-        text: 'REST Framework',
-        link: '/rest-framework/'
-      },
-      {
-        text: 'Advanced topics',
-        link: '/advanced/'
-      },
-      {
-        text: 'Proyecto',
-        link: '/project/'
-      },
-      {
-        text: 'Glosario',
-        link: '/glossary/'
-      }
+      // {
+      //   text: 'REST Framework',
+      //   link: '/rest-framework/'
+      // },
+      // {
+      //   text: 'Advanced topics',
+      //   link: '/advanced/'
+      // },
+      // {
+      //   text: 'Proyecto',
+      //   link: '/project/'
+      // },
+      // {
+      //   text: 'Glosario',
+      //   link: '/glossary/'
+      // }
     ],
     sidebar: {
       '/django/': [
@@ -74,28 +74,28 @@ module.exports = {
           children: ['', 'intro', 'models', 'auth', 'static', 'other']
         }
       ],
-      '/rest-framework/': [
-        {
-          title: 'REST Framework',
-          collapsable: false,
-          children: ['', 'jwt', 'serializers', 'viewsets', 'router', 'security']
-        }
-      ],
-      '/advanced/': [
-        {
-          title: 'Advanced topics',
-          collapsable: false,
-          children: [
-            '',
-            'db',
-            'heroku',
-            'celery',
-            's3',
-            'testing',
-            'registration'
-          ]
-        }
-      ]
+      // '/rest-framework/': [
+      //   {
+      //     title: 'REST Framework',
+      //     collapsable: false,
+      //     children: ['', 'jwt', 'serializers', 'viewsets', 'router', 'security']
+      //   }
+      // ],
+      // '/advanced/': [
+      //   {
+      //     title: 'Advanced topics',
+      //     collapsable: false,
+      //     children: [
+      //       '',
+      //       'db',
+      //       'heroku',
+      //       'celery',
+      //       's3',
+      //       'testing',
+      //       'registration'
+      //     ]
+      //   }
+      // ]
     }
   },
 
