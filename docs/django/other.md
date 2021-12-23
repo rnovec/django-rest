@@ -1,4 +1,4 @@
-
+# Otros puntos importantes
 
 ## [Vistas](https://docs.djangoproject.com/en/3.1/topics/http/views/)
 
@@ -41,6 +41,5 @@ def example_json(request):​
     return JsonResponse({ "foo": "bar" })
 ```
 
-# Custom User Model 
-# Services y selectores 
-# Signals 
+## Signals 
+## Services y selectores 

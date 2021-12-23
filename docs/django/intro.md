@@ -1,4 +1,5 @@
-# Programación Orientada a Objetos (POO)
+# Primeros pasos
+## Programación Orientada a Objetos (POO)
 
 Es un paradigma de programación en el que los conceptos delmundo real relevantes para nuestro problema se modelan a través de clases y objetos, y en el que nuestro programa consiste de una serie de interacciones entre estos objetos.
 
@@ -107,7 +108,7 @@ o
 
     $ ./manage.py runserver
 
-## Primeras configiraciones
+### Primeras configuraciones
 
 ```py
 import os
@@ -124,7 +125,7 @@ ALLOWED_HOSTS = ['*']
     $ export DEBUG=1
     $ export SECRET_KEY=my-secret-key
 
-## Variables de entorno
+### Variables de entorno
 
 .env.example
 

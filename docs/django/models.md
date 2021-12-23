@@ -41,7 +41,7 @@ class CustomUserAdmin(UserAdmin):
 admin.site.register(CustomUser, CustomUserAdmin)
 ```
 
-## Django Admin
+## Admin site
 
 ```py
 # accounts/admin.py
@@ -114,7 +114,7 @@ MyModel.objects.get()
 MyModel.objects.create()
 ```
 
-## CRUD
+### CRUD
 
 ```py
 from .models import MyModel
@@ -170,7 +170,7 @@ queryset = Post.objects.filter(created_at='2020-01-01')
 ...
 ```
 
-## Tarea
+### Tarea
 
 - 10 Examples of ORM Create
 - 10 Examples of ORM List/Filter/Order
@@ -188,5 +188,5 @@ queryset = Post.objects.filter(created_at='2020-01-01')
 
 ## Enlaces útiles
 
-[UUID](https://es.wikipedia.org/wiki/Identificador_%C3%BAnico_universal)
-[Advenced filtering](https://docs.djangoproject.com/en/3.0/topics/db/queries/#complex-lookups-with-q-objects)
+- [UUID](https://es.wikipedia.org/wiki/Identificador_%C3%BAnico_universal)
+- [Advanced filtering](https://docs.djangoproject.com/en/3.0/topics/db/queries/#complex-lookups-with-q-objects)
