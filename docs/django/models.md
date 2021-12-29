@@ -26,26 +26,6 @@ Al crear un nuevo modelo o hacer algun cambio en sus campos:
 ```py
 # accounts/admin.py
 from django.contrib import admin
-from django.contrib.auth import get_user_model
-from django.contrib.auth.admin import UserAdmin
-from .forms import CustomUserCreationForm, CustomUserChangeForm
-
-CustomUser = get_user_model()
-
-class CustomUserAdmin(UserAdmin):
-    add_form = CustomUserCreationForm
-    form = CustomUserChangeForm
-    model = CustomUser
-    list_display = ['email', 'username',]
-
-admin.site.register(CustomUser, CustomUserAdmin)
-```
-
-## Admin site
-
-```py
-# accounts/admin.py
-from django.contrib import admin
 from .models import MyModel
 
 # 1
@@ -54,7 +34,10 @@ admin.site.register(MyModel)
 # 2
 @admin.register(MyModel)
 class MyModelAdmin(admin.AdminModel):
-    list_display = []
+    list_display = ['field1', 'field2', 'field3' ...]
+    list_filter = ['field1', 'field2', 'field3' ...]
+    search_fields = ['field1', 'field2', 'field3' ...]
+    list_editable = ['field1', 'field2', 'field3' ...]
 
 ```
 
@@ -67,10 +50,17 @@ Asumamos que tenemos un modelo cualquiera llamado `Person` para cada modelo de D
 from django.db import models
 
 class Person(models.Model):
-    name = CharField(default="", max_length=50)
-    age = IntegerField(default=0)
+    name = models.CharField(default="", max_length=50)
+    age = models.IntegerField(default=0)
 
 # somefile.py
+# crear un nuevo registro
+instance = Person(name="Ana", age=30)
+instance.save()
+
+# otra forma de crear un nuevo registro
+Person.objects.create(name="Ana", age=25)
+
 obj = Person.objects.get(pk=1) # obtener un registro por su Primary Key
 obj = Person.objects.get(name="Carlos") # obtener un registro por algun campo especifico
 obj.name # podemos acceder a sus datos
@@ -90,17 +80,6 @@ queryset = Person.objects.filter(name="Carlos") # Filtrar por algun campo esto d
 # actualizar en masa, actualizara todos los registros con los datos proporcionados
 Person.objects.update(name="Carlos", age=35)
 
-# crear un nuevo registro
-instance = Person(name="Ana", age=30)
-instance.save()
-
-```
-
-```py
-from django.db import models
-
-class MyModel(models.Model):
-    ...
 ```
 
 ## ORM
@@ -108,10 +87,10 @@ class MyModel(models.Model):
 ```py
 from .models import MyModel
 
-MyModel.objects.all()
-MyModel.objects.filter()
-MyModel.objects.get()
-MyModel.objects.create()
+MyModel.objects.all() # obtener todos los registros de una Tabla/Modelo
+MyModel.objects.filter() # filtrar por algun campo
+MyModel.objects.get() # obtener un registro por su Primary Key
+MyModel.objects.create() # crear un nuevo registro
 ```
 
 ### CRUD

@@ -21,9 +21,6 @@ class Animal:
     def speak(self):
         return "{} says WOOF!".format(self.name)
 
-class Aninmal(object):
-    pass
-
 # Properties
 class Dog(Animal):
 
@@ -87,7 +84,7 @@ display_info('John', 25)
     python3 -m venv venv
     source venv/bin/activate # ./venv/Scripts/activate
     pip install Django
-    django-admin startproject .
+    django-admin startproject NAME .
 
 ## Comandos iniciales
 

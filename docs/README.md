@@ -64,6 +64,13 @@ Algunas razones por las que es posible que desee utilizar **REST Framework**:
 - [Github Desktop for Linux](https://github.com/shiftkey/desktop/releases)
 - [Github Student Developer Pack](https://education.github.com/pack)
 
+# Libros de referencia
+
+- [Django for Beginners](https://www.amazon.com/-/es/William-S-Vincent/dp/1735467200/ref=pd_bxgy_img_2/145-9621862-4892046?pd_rd_w=dKlt9&pf_rd_p=c64372fa-c41c-422e-990d-9e034f73989b&pf_rd_r=X6EV54DXMPQKKJSYDRE1&pd_rd_r=8451fedb-5c33-498b-920d-cd10f690fe26&pd_rd_wg=DKvds&pd_rd_i=1735467200&psc=1)
+- [Django for Professionals](https://www.amazon.com/-/es/William-S-Vincent/dp/1735467235/ref=sr_1_1?__mk_es_US=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=371HS1P0MHLWP&keywords=django&qid=1640232292&s=books&sprefix=django%2Cstripbooks-intl-ship%2C126&sr=1-1) 
+- [Django for APIs](https://www.amazon.com/-/es/William-S-Vincent/dp/1735467227/ref=pd_bxgy_img_2/145-9621862-4892046?pd_rd_w=QJ6Oo&pf_rd_p=c64372fa-c41c-422e-990d-9e034f73989b&pf_rd_r=4EC2NYX1F6422PW6WNQ7&pd_rd_r=7c920f2d-c268-4541-b63e-bdbc898bb37a&pd_rd_wg=IY1CI&pd_rd_i=1735467227&psc=1)
+- [Test-Driven Development with Python](https://www.amazon.com/-/es/Harry-Percival/dp/1491958707/ref=sr_1_1?__mk_es_US=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3T6HG2G0KF8W3&keywords=web+development+python&qid=1640232450&s=books&sprefix=web+development+python%2Cstripbooks-intl-ship%2C128&sr=1-1)
+
 # Instructor
 
 **Raul Novelo** - [@rnovec](https://github.com/rnovec)
