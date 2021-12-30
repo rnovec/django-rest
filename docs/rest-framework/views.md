@@ -6,7 +6,7 @@
 from django.http import JsonResponse​
 
 def example(request, *args, **kwargs):​
-        return JsonResponse({ "foo": "bar" })
+    return JsonResponse({ "foo": "bar" })
 
 ```
 

@@ -71,14 +71,14 @@ module.exports = {
         {
           title: 'Intro',
           collapsable: false,
-          children: ['', 'intro', 'models', 'other']
+          children: ['', 'intro', 'models', 'other', 'auth']
         }
       ],
       '/rest-framework/': [
         {
           title: 'REST Framework',
           collapsable: false,
-          children: ['', 'jwt', 'serializers', 'views', 'router', 'security']
+          children: ['', 'serializers', 'views', 'router', 'security']
         }
       ],
       // '/advanced/': [

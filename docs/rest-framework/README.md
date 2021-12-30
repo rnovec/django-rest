@@ -59,7 +59,12 @@ INSTALLED_APPS = [
     ...
 ]
 
-## TODO: add middlewares conf
+MIDDLEWARE = [
+    ...
+    'corsheaders.middleware.CorsMiddleware',  # django-cors-headers middleware
+    'django.middleware.common.CommonMiddleware',
+    ...
+]
 
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_CREDENTIALS = True

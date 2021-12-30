@@ -14,6 +14,7 @@ https://www.django-rest-framework.org/api-guide/schemas/
 - Urls
 - Services
 - Selectors
+- Abstract Models
 
 ## Deployment
 
@@ -26,12 +27,11 @@ https://www.django-rest-framework.org/api-guide/schemas/
 - https://github.com/CryceTruly/incomeexpensesapi
 - https://www.youtube.com/watch?v=rJWAGQ0JxxI
 
-
-- Django REST Registration
-- Django social Auth
-- Boto3
-- Celery
-- DRF YASGN
+* Django REST Registration
+* Django social Auth
+* Boto3
+* Celery
+* DRF YASGN
 
 ## Permisos
 
@@ -54,4 +54,5 @@ class BasePermission(BasePermission):
         """
         return True
 ```
+
 

@@ -176,3 +176,33 @@ queryset = Post.objects.filter(created_at='2020-01-01')
 
 - [UUID](https://es.wikipedia.org/wiki/Identificador_%C3%BAnico_universal)
 - [Advanced filtering](https://docs.djangoproject.com/en/3.0/topics/db/queries/#complex-lookups-with-q-objects)
+
+## Abstract Models
+
+project/base_models.py
+
+```py
+from django.db.models import Model
+
+class BaseAbstractModel(Model):
+    """
+    Abstract model to be inherited by all models.
+    """
+    is_active = models.BooleanField(default=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        abstract = True
+
+```
+
+myapp/models.py
+
+```py
+from project.base_models import BaseAbstractModel
+
+class MyModel(BaseAbstractModel):
+    ...
+
+```
