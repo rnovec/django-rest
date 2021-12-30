@@ -12,6 +12,8 @@ https://www.django-rest-framework.org/api-guide/schemas/
 - Settings
 - Whitenoise
 - Urls
+- Services
+- Selectors
 
 ## Deployment
 
@@ -20,12 +22,36 @@ https://www.django-rest-framework.org/api-guide/schemas/
 
 ## Recursos adicionales
 
-https://github.com/rnovec/django-templates
-https://github.com/CryceTruly/incomeexpensesapi
-https://www.youtube.com/watch?v=rJWAGQ0JxxI
+- https://github.com/rnovec/django-templates
+- https://github.com/CryceTruly/incomeexpensesapi
+- https://www.youtube.com/watch?v=rJWAGQ0JxxI
 
-- django REST Registration
+
+- Django REST Registration
 - Django social Auth
 - Boto3
 - Celery
+- DRF YASGN
+
+## Permisos
+
+```py
+from restframework.permissions import BasePermission
+
+class BasePermission(BasePermission):
+    """
+    A base class from which all permission classes should inherit.
+    """
+    def has_permission(self, request, view):
+        """
+        Return `True` if permission is granted, `False` otherwise.
+        """
+        return True
+
+    def has_object_permission(self, request, view, obj):
+        """
+        Return `True` if `has_permission` is `True` and object permission is granted, `False` otherwise.
+        """
+        return True
+```
 

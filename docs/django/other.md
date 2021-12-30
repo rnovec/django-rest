@@ -40,6 +40,3 @@ def example_json(request):​
     # Respuesta con JSON
     return JsonResponse({ "foo": "bar" })
 ```
-
-## Signals 
-## Services y selectores 

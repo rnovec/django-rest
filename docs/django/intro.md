@@ -34,13 +34,13 @@ print(puppy.speak())
 print(puppy.name_len)
 
 # Decorators
-def decorator_function(original_function):
-    def wrapper_function(*args, **kwargs):
-        print('wrapper executed this before {}'.format(original_function.__name__))
-        return original_function(*args, **kwargs)
-    return wrapper_function
+def decor(func):
+    def inner(*args, **kwargs):
+        print('wrapper executed this before {}'.format(func.__name__))
+        return func(*args, **kwargs)
+    return inner
 
-@decorator_function
+@decor
 def display_info(name, age):
     print('display_info ran with arguments {}, {}'.format(name, age))
 
@@ -54,21 +54,19 @@ display_info('John', 25)
     /project/
         __init__.py
         urls.py
-        manage.py
         settings.py
     blog/
         __init__.py
         models.py
         views.py
-        urls.py
-        templates/
-        static/
+        tests.py
     foro/
         __init__.py
         models.py
         views.py
-        urls.py
-        templates/
+        tests.py
+    manage.py
+    
 ```
 
 ## Archivos de una aplicación

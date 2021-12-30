@@ -4,7 +4,7 @@ module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
-  title: 'Django REST Framework',
+  title: 'Curso de Django',
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
@@ -49,18 +49,18 @@ module.exports = {
         text: 'Django',
         link: '/django/'
       },
-      // {
-      //   text: 'REST Framework',
-      //   link: '/rest-framework/'
-      // },
+      {
+        text: 'REST Framework',
+        link: '/rest-framework/'
+      },
       // {
       //   text: 'Advanced topics',
       //   link: '/advanced/'
       // },
-      // {
-      //   text: 'Proyecto',
-      //   link: '/project/'
-      // },
+      {
+        text: 'Proyecto',
+        link: '/project/'
+      },
       // {
       //   text: 'Glosario',
       //   link: '/glossary/'
@@ -71,16 +71,16 @@ module.exports = {
         {
           title: 'Intro',
           collapsable: false,
-          children: ['', 'intro', 'models', 'auth', 'static', 'other']
+          children: ['', 'intro', 'models', 'other']
         }
       ],
-      // '/rest-framework/': [
-      //   {
-      //     title: 'REST Framework',
-      //     collapsable: false,
-      //     children: ['', 'jwt', 'serializers', 'viewsets', 'router', 'security']
-      //   }
-      // ],
+      '/rest-framework/': [
+        {
+          title: 'REST Framework',
+          collapsable: false,
+          children: ['', 'jwt', 'serializers', 'views', 'router', 'security']
+        }
+      ],
       // '/advanced/': [
       //   {
       //     title: 'Advanced topics',

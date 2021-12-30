@@ -87,10 +87,17 @@ Person.objects.update(name="Carlos", age=35)
 ```py
 from .models import MyModel
 
-MyModel.objects.all() # obtener todos los registros de una Tabla/Modelo
-MyModel.objects.filter() # filtrar por algun campo
-MyModel.objects.get() # obtener un registro por su Primary Key
-MyModel.objects.create() # crear un nuevo registro
+# Acciones sobre los querysets
+qs = MyModel.objects.all() # obtener todos los registros de una Tabla/Modelo
+qs = MyModel.objects.filter() # filtrar por algun campo
+qs.update() # actualizar en masa
+qs.delete() # eliminar en masa
+
+# Acciones sobre una instancia
+instance = MyModel.objects.create() # crear un nuevo registro
+instance = MyModel.objects.get() # obtener un registro por su Primary Key
+instance.update() # actualizar un registro
+instance.delete() # eliminar un registro
 ```
 
 ### CRUD
@@ -137,10 +144,9 @@ queryset = queryset.order_by('-foo') # DESC
 
 ```
 
-### Filtros avanzados
+### Lookup fields
 
 ```py
-# filtering instances
 queryset = Post.objects.filter(title__icontains='Trump')
 queryset = Post.objects.filter(some_integer_field__lte=1)
 queryset = Post.objects.filter(some_integer_field__gte=1, title="Pepe")
@@ -151,10 +157,11 @@ queryset = Post.objects.filter(created_at='2020-01-01')
 
 ### Tarea
 
+- Crear un modelo llamado Expense
 - 10 Examples of ORM Create
 - 10 Examples of ORM List/Filter/Order
 - 5 Examples of ORM Get
-- 5 Examples of ORM Update/Partial
+- 5 Examples of ORM Update
 - 5 Examples of ORM Delete
 
 ## [Relaciones](https://docs.djangoproject.com/en/3.1/topics/db/models/#relationships)

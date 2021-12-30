@@ -1,4 +1,4 @@
-# [Viewsets](https://www.django-rest-framework.org/api-guide/viewsets/)
+# [Views](https://www.django-rest-framework.org/api-guide/views/)
 
 ### Un ejemplo sin DRF
 
@@ -10,8 +10,20 @@ def example(request, *args, **kwargs):​
 
 ```
 
+### Un ejemplo basico con DRF
 
-## Viewsets
+```py
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+
+@api_view()
+def hello_world(request):
+    return Response({"message": "Hello, world!"})
+
+```
+
+
+## [Viewsets](https://www.django-rest-framework.org/api-guide/viewsets/)
 
 ```py
 # views.py
