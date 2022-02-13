@@ -46,27 +46,38 @@ module.exports = {
     lastUpdated: false,
     nav: [
       {
-        text: 'Django',
-        link: '/django/'
+        text: 'POO',
+        link: '/poo/'
       },
-      {
-        text: 'REST Framework',
-        link: '/rest-framework/'
-      },
+      // {
+      //   text: 'Django',
+      //   link: '/django/'
+      // },
+      // {
+      //   text: 'REST Framework',
+      //   link: '/rest-framework/'
+      // },
       // {
       //   text: 'Advanced topics',
       //   link: '/advanced/'
       // },
-      {
-        text: 'Proyecto',
-        link: '/project/'
-      },
+      // {
+      //   text: 'Proyecto',
+      //   link: '/project/'
+      // },
       // {
       //   text: 'Glosario',
       //   link: '/glossary/'
       // }
     ],
     sidebar: {
+      '/poo/': [
+        {
+          title: 'POO',
+          collapsable: false,
+          children: ['']
+        }
+      ],
       '/django/': [
         {
           title: 'Intro',

@@ -31,13 +31,14 @@ What things you need to install the software and how to install them
 ### Installing
 
 ```bash
-npm install # yarn install
+yarn install
 ```
 
 ```
-npm run dev
+yarn dev
 ```
 
+Note: only works with Yarn
 
 ## Built With
 
